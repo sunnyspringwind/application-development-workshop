@@ -12,3 +12,4 @@ C:\Users\aases\Desktop\app-development-workshop\app-development-workshop\obj\Deb
 C:\Users\aases\Desktop\app-development-workshop\app-development-workshop\obj\Debug\net9.0\app-development-workshop.pdb
 C:\Users\aases\Desktop\app-development-workshop\app-development-workshop\obj\Debug\net9.0\app-development-workshop.genruntimeconfig.cache
 C:\Users\aases\Desktop\app-development-workshop\app-development-workshop\obj\Debug\net9.0\ref\app-development-workshop.dll
+C:\Users\aases\Desktop\app-development-workshop\app-development-workshop\obj\Debug\net9.0\app-development-workshop.sourcelink.json
