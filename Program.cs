@@ -73,6 +73,7 @@ namespace AppDevelpment
             }
 
             //    Task 5 Loops
+            // 5.1 for loop
             Console.Write("Enter a number to sum: ");
             _ = int.TryParse(Console.ReadLine(), out int n);
 
@@ -85,12 +86,37 @@ namespace AppDevelpment
 
             Console.WriteLine($"Sum is: {sum}");
 
+            // 5.2 Print using while loop
+            int no = 1;
+            Console.WriteLine($"Count using while loop: ");
+            while (no < 21)
+            {
+                if (no % 4 == 0)
+                {
+                    no++;  // increment before skipping
+                    continue;
+                }
+
+                if (no == 15)
+                    break;
+
+                Console.WriteLine(no++);
+            }
+
+            // 5.3 sum of array for each;
+            int[] numbers = [1, 2, 3, 4, 5, 6, 7];
+            int arrsum = 0;
+            foreach (int nom in numbers)
+            {
+                arrsum += nom;
+            }
+            Console.WriteLine(Console.WriteLine($"Sum of Array {arrsum}"));
 
             // Task 6 Try Catch Finally
             // number checker
             try
             {
-                Console.WriteLine("Enter a number: ");
+                Console.Write("Enter a number: ");
                 int number = int.Parse(Console.ReadLine() ?? "0");
             }
             catch (Exception)
@@ -109,12 +135,12 @@ namespace AppDevelpment
                 Console.Write("Enter new password: ");
                 string? password = Console.ReadLine();
 
-           if (password != null && password.Length < 6)
+                if (password != null && password.Length < 6)
                 {
                     throw new Exception("Password must be at least 6 characters.");
                 }
 
-               else if (password != null && password.Length >= 7)
+                else if (password != null && password.Length >= 7)
                 {
                     Console.WriteLine("Password satistifed the requirement.");
 
