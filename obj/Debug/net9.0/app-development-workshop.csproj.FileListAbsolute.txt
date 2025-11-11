@@ -1,0 +1,14 @@
+C:\Users\aases\Desktop\app-development-workshop\app-development-workshop\bin\Debug\net9.0\app-development-workshop.exe
+C:\Users\aases\Desktop\app-development-workshop\app-development-workshop\bin\Debug\net9.0\app-development-workshop.deps.json
+C:\Users\aases\Desktop\app-development-workshop\app-development-workshop\bin\Debug\net9.0\app-development-workshop.runtimeconfig.json
+C:\Users\aases\Desktop\app-development-workshop\app-development-workshop\bin\Debug\net9.0\app-development-workshop.dll
+C:\Users\aases\Desktop\app-development-workshop\app-development-workshop\bin\Debug\net9.0\app-development-workshop.pdb
+C:\Users\aases\Desktop\app-development-workshop\app-development-workshop\obj\Debug\net9.0\app-development-workshop.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aases\Desktop\app-development-workshop\app-development-workshop\obj\Debug\net9.0\app-development-workshop.AssemblyInfoInputs.cache
+C:\Users\aases\Desktop\app-development-workshop\app-development-workshop\obj\Debug\net9.0\app-development-workshop.AssemblyInfo.cs
+C:\Users\aases\Desktop\app-development-workshop\app-development-workshop\obj\Debug\net9.0\app-development-workshop.csproj.CoreCompileInputs.cache
+C:\Users\aases\Desktop\app-development-workshop\app-development-workshop\obj\Debug\net9.0\app-development-workshop.dll
+C:\Users\aases\Desktop\app-development-workshop\app-development-workshop\obj\Debug\net9.0\refint\app-development-workshop.dll
+C:\Users\aases\Desktop\app-development-workshop\app-development-workshop\obj\Debug\net9.0\app-development-workshop.pdb
+C:\Users\aases\Desktop\app-development-workshop\app-development-workshop\obj\Debug\net9.0\app-development-workshop.genruntimeconfig.cache
+C:\Users\aases\Desktop\app-development-workshop\app-development-workshop\obj\Debug\net9.0\ref\app-development-workshop.dll
