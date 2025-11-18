@@ -1,4 +1,4 @@
-namespace AppDevelpment.Week_3 {
+namespace AppDev.Week_3 {
 
     public class Operators
     {
