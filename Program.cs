@@ -1,6 +1,5 @@
 ﻿using System;
-using AppDev.Week_4;
-
+using AppDev.Week_5;
 namespace AppDev
 {
     class Program
@@ -9,133 +8,85 @@ namespace AppDev
         {
 
 
-    // Task 1: Class, Object & Fields
-            Student student1 = new()
-            {
-                Id = 1,
-                Name = "Ashish",
-                Description = "Definately Looks like Henry Cavil"
-            };
+            // Task 1: Encapsulation
+            Console.WriteLine("Task 1: Encapsulation");
+            BankAccount account1 = new BankAccount("ACC7100");
 
-            Student student2 = new()
-            {
-                Id = 2,
-                Name = "Sidney",
-                Description = "Looks like a girl"
-            };
-
-            // printing instance values
-            Console.WriteLine($"ID: {student1.Id} | Name: {student1.Name} | Desc: {student1.Description}");
-            Console.WriteLine($"ID: {student2.Id} | Name: {student2.Name} | Desc: {student2.Description}");
-
-            // printing static values
-            Console.WriteLine($"School: {Student.School}");
+            //priting account number, deposit and withdraw
+            Console.WriteLine(account1.AccountNumber);
+            Console.WriteLine(account1.Deposit(20000));
+            Console.WriteLine(account1.Withdraw(300000));
 
 
-    // Task 2: Methods & Return Types
-            // Create an object of Calculator
-            Calculator calc = new();
-
-            // Call void method
-            calc.PrintWelcome();
-
-            // Call Add method and print the result
-            int sum = calc.Add(5, 10);
-            Console.WriteLine("Sum: " + sum);
-
-            // Call Multiply method with both parameters
-            int product1 = calc.Multiply(5, 3);
-            Console.WriteLine("Product (5 * 3): " + product1);
-
-            // Call Multiply method with only first parameter (num2 defaults to 1)
-            int product2 = calc.Multiply(7);
-            Console.WriteLine("Product (7 * default 1): " + product2);
+            // Task 2: Inheritance
+            Console.WriteLine("Task 2: Inheritance");
+            Car car = new Car(6);
+            car.Brand = "BMW";
+            car.Speed = 40;
+            car.DisplayInfo();
+            Console.WriteLine();
+            Motorcycle motorcycle = new Motorcycle("red");
+            motorcycle.Brand = "Honda";
+            motorcycle.Speed = 60;
+            motorcycle.DisplayInfo();
 
 
-    // Task 3 : Parameter Types 
-        ParameterDemo demo = new ParameterDemo();
+            // Task 3: Polymorphism
+            // Vechicle class 
+            Console.WriteLine("Task 3: Polymorphism");
 
-        // 1. Using ref
-        int myNumber = 5;
-        demo.Increase(ref myNumber);
-        Console.WriteLine("Number after Increase: " + myNumber);
+            Printer printer = new Printer();
+            printer.Print("Calling all autobots.");
+            printer.Print(123);
+            printer.Print("Calling all autobots", 123);
 
-        // 2. Using out
-        demo.GetFullName(out string fullName);
-        Console.WriteLine("Full Name: " + fullName);
+            // Teacher class
+            Console.WriteLine();
+            Console.WriteLine("English Teacher");
+            EnglishTeacher teacher1 = new EnglishTeacher();
+            teacher1.Teaching();
+            teacher1.SalaryInfo();
 
-        // 3. Using params
-        int sum1 = demo.SumAll(2, 4, 6, 8);
-        Console.WriteLine("Sum of all numbers: " + sum1);
-
-
-    // Task 4 : Constructors
-        // 1. Create object using default constructor
-        Player defaultPlayer = new Player();
-
-        // Since default constructor does not set values, set manually for display maybe.
-        defaultPlayer.playerName = "DefaultHero";
-        defaultPlayer.level = 1;
-        defaultPlayer.health = 100;
-
-        // Print default player values
-        Console.WriteLine($"Default Player: Name = {defaultPlayer.playerName}, Level = {defaultPlayer.level}, Health = {defaultPlayer.health}");
-
-        // 2. Create object using parameterized constructor
-        Player paramPlayer = new Player("Ashish", 5, 150);
-
-        // Print parameterized player values
-        Console.WriteLine($"Parameterized Player: Name = {paramPlayer.playerName}, Level = {paramPlayer.level}, Health = {paramPlayer.health}");
- 
-
-    // Task 5 : Enums and Records
-
-        // --- Enum Tasks ---
-
-       // Ask user to input a day
-        Console.Write("Enter a day: ");
-        string? dayInput = Console.ReadLine();
-
-        // Determine if Weekend or Weekday
-        DayType dayType;
-
-        if (dayInput.Equals("Friday", StringComparison.OrdinalIgnoreCase) ||
-            dayInput.Equals("Saturday", StringComparison.OrdinalIgnoreCase))
-        {
-            dayType = DayType.Weekend;
-        }
-        else
-        {
-            dayType = DayType.Weekday;
-        }
-
-        Console.WriteLine($"It is: {dayType}");
-
-        // --- Record Tasks ---
-
-        // Create a Book record
-        Book book1 = new Book("C# Basics", "John Doe", 499.99);
-
-        // Create another book using 'with' expression
-        Book book2 = book1 with { title = "Advanced C#", price = 599.99 };
-
-        // Printing first book object
-        Console.WriteLine($"Modified Book: {book1.title}, {book1.author}, {book1.price}");
+            Console.WriteLine("Nepali Teacher");
+            NepaliTeacher teacher2 = new NepaliTeacher();
+            teacher2.Teaching();
+            teacher2.SalaryInfo();
 
 
-    // Task 6: Debugging
+            // Task 4: Abstraction
+            Console.WriteLine();
+            Console.WriteLine("Task 4: Abstraction");
+            Console.WriteLine("Abstract Car:");
+            AppDev.Week_5.Abstract.Car car2 = new AppDev.Week_5.Abstract.Car();
+            car2.StartEngine();
+            car2.StopEngine();
+            car2.Display();
+            Console.WriteLine();
 
-        Console.Write("Enter marks: ");
-        bool isValidMarks = int.TryParse(Console.ReadLine(), out int marks);
+            
+            Console.WriteLine("Abstract Bike:");
+            AppDev.Week_5.Abstract.Bike bike = new AppDev.Week_5.Abstract.Bike();
+            bike.StartEngine();
+            bike.StopEngine();
+            bike.Display();
 
-        Console.Write("Enter total: ");
-        bool isValidTotal = int.TryParse(Console.ReadLine(), out int total);
+            // Task 5 : OOP
+            Console.WriteLine();
+            Console.WriteLine("Task 5 : OOP");
+            // ElectronicsStore object
+            ElectronicsStore store = new ElectronicsStore();
 
-        double percentage = marks / total * 100;
-        // double percentage = (double)marks / total * 100; correct approach
+            // Laptop and Smartphone objects
+            Laptop myLaptop = new Laptop("Dell", 1200);
+            Smartphone myPhone = new Smartphone("Samsung", 800);
 
-        Console.WriteLine("Percentage: " + percentage);
-        //  C# does integer division first, e.g 45 / 50 = 0 → then 0 * 100 = 0 thus should Convert one operand to double before division:
+            // Add to the store
+            store.AddDevice(myLaptop);
+            store.AddDevice(myPhone);
+
+            // Display all devices info including child-specific behavior
+            store.ShowAllDeviceDetails();
+
         }
 
     }
