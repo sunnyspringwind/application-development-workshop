@@ -192,18 +192,20 @@ namespace AppDev
             Console.WriteLine($"First Song >4 min: {firstAbove4Min.Title}");
             Console.WriteLine($"First Song >10 min: {(firstAbove10Min != null ? firstAbove10Min.Title : "None")}");
             Console.WriteLine();
+
+
             // Task 6: LINQ Continued
 
             var bookings = new List<Booking>
-{
-    new Booking { CustomerName = "Aases", Destination = "Pokhara", Price = 8000, DurationInDays = 3, IsInternational = false },
-    new Booking { CustomerName = "Prija", Destination = "Thailand", Price = 15000, DurationInDays = 5, IsInternational = true },
-    new Booking { CustomerName = "Aleesa", Destination = "Chitwan", Price = 12000, DurationInDays = 6, IsInternational = false },
-    new Booking { CustomerName = "Leesa", Destination = "Singapore", Price = 20000, DurationInDays = 4, IsInternational = true },
-    new Booking { CustomerName = "Parash", Destination = "Pokhara", Price = 11000, DurationInDays = 5, IsInternational = false }
-};
+            {
+                new() { CustomerName = "Aases", Destination = "Pokhara", Price = 8000, DurationInDays = 3, IsInternational = false },
+                new() { CustomerName = "Prija", Destination = "Thailand", Price = 15000, DurationInDays = 5, IsInternational = true },
+                new() { CustomerName = "Aleesa", Destination = "Chitwan", Price = 12000, DurationInDays = 6, IsInternational = false },
+                new() { CustomerName = "Leesa", Destination = "Singapore", Price = 20000, DurationInDays = 4, IsInternational = true },
+                new() { CustomerName = "Parash", Destination = "Pokhara", Price = 11000, DurationInDays = 5, IsInternational = false }
+            };
 
-            // Filter and transfomr
+            // Filter and transform
             var report = bookings
         // Filter: price > 10000 AND duration > 4
         .Where(b => b.Price > 10000 && b.DurationInDays > 4)
